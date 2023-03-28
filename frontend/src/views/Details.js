@@ -1,8 +1,14 @@
 import EmptyDetails from "../components/EmptyDetails";
 import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 import "../css/details.css";
 import CardDetail from "../components/CardDetail";
+import React, { useState } from "react";
 export default function Details() {
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <div className="container">
@@ -36,15 +42,64 @@ export default function Details() {
               />
             </svg>
           </div>
-          <Button variant="primary" data-cy="activity-add-button">
-            + Tambah
-          </Button>
+          <div>
+            <svg
+              width="54"
+              height="54"
+              viewBox="0 0 54 54"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 24L22 20M22 20L26 24M22 20V34"
+                stroke="#888888"
+                stroke-width="1.5"
+                stroke-linecap="square"
+              />
+              <path
+                d="M36 30L32 34M32 34L28 30M32 34V20"
+                stroke="#888888"
+                stroke-width="1.5"
+                stroke-linecap="square"
+              />
+              <rect
+                x="0.5"
+                y="0.5"
+                width="53"
+                height="53"
+                rx="26.5"
+                stroke="#E5E5E5"
+              />
+            </svg>
+            <Button
+              variant="primary"
+              data-cy="activity-add-button"
+              style={{ marginLeft: "20px" }}
+              onClick={handleShow}
+            >
+              + Tambah
+            </Button>
+          </div>
         </div>
         <div className="d-flex justify-content-center align-items-center">
           <EmptyDetails />
         </div>
         <CardDetail />
       </div>
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>Modal heading</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Save Changes
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 }
