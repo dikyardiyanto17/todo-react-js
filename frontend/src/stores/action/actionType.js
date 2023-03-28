@@ -1,5 +1,3 @@
-export const FetchingAccounts = 'fetchAccounts'
-export const FetchingAccountDetail = "accountDetail"
-export const FetchingCategories = 'fetchCategories'
-export const FetchingAccount = 'fetchAccount'
-export const FetchingCategory = 'fetchCategory'
+export const FetchingActivites = 'fetchActivities'
+export const FetchingActivity = "fetchActivity"
+export const FetchingToDo = "fetchToDo"
