@@ -1,0 +1,29 @@
+.activity-card {
+  background-color: #fff;
+  border-radius: 12px !important;
+  padding: 22px 27px !important;
+  margin-bottom: 26px;
+  position: relative;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.activity-body {
+  cursor: pointer !important;
+  height: 158px !important;
+}
+
+.card-image {
+  width: 20px !important;
+}
+
+.card-footer {
+  position: absolute;
+  z-index: 2;
+  bottom: 25px;
+  display: flex;
+  justify-content: space-between;
+  border: 0 !important;
+  padding: 0;
+  width: 70%;
+  background-color: #fff !important;
+}

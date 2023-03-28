@@ -1,0 +1,60 @@
+.content-item {
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 27px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 43px 0 55px;
+}
+
+.activity {
+  font-weight: bold;
+  font-style: normal;
+}
+
+.btn {
+  border-radius: 45px !important;
+  border: 0 !important;
+  padding: 13.5px 29px !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+}
+
+.btn.btn-primary {
+  background-color: #16abf8;
+}
+
+.dashboard-content {
+  padding: 0 20px 0 0;
+}
+
+.label-indicator {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  margin: 0 19px 0 7px;
+}
+
+.very-high {
+  background-color: #ed4c5c;
+}
+
+.icon-edit-p {
+  width: 20px;
+  height: 20px;
+  background-image: url(https://ivan-todo-devrank.netlify.app/static/media/icon-edit-p.4ebec345.svg);
+}
+.icon-edit-p {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
